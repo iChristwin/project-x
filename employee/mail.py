@@ -2,7 +2,7 @@ import smtplib
 import os
 
 
-# PSWD = os.environ.get("VAR1")
+PSWD = os.environ.get("VAR1")
 
 
 def send(SUBJECT, TEXT):
@@ -13,13 +13,13 @@ def send(SUBJECT, TEXT):
     s.starttls()
 
     # Authentication
-    s.login("", '')
+    s.login("nsukkaai@gmail.com", "itisworthmylifetime")
 
     # message to be sent
     message = 'Subject: {}\n\n{}'.format(SUBJECT, TEXT)
 
     # sending the mail
-    s.sendmail("", "", message)
+    s.sendmail("nsukkaai@gmail.com", "info@learnhall.com", message)
 
     # terminating the session
     s.quit()
