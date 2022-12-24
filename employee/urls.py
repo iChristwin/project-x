@@ -16,3 +16,9 @@ urlpatterns = [
     path('subscribex/', SubscribeList.as_view())
 
 ]
+
+
+
+
+
+

@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-cqbia2)6m9w-pv@k)zhrbr3*w9cqh@czj$*$kb5@k%%$o-l5v6
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -33,13 +33,13 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'employee',
     'rest_framework',
-
-    "django.contrib.admin",
+     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "corsheaders",
 ]
 
 MIDDLEWARE = [
@@ -50,6 +50,10 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
+    "django.middleware.common.CommonMiddleware",
+    'django.middleware.security.SecurityMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
 ROOT_URLCONF = "X.urls"
@@ -69,6 +73,25 @@ TEMPLATES = [
         },
     },
 ]
+#
+# CORS_ALLOWED_ORIGIN = [
+#     "http://localhost:3000"
+#
+# ]
+CORS_ORIGIN_ALLOW_ALL = True
+#
+# CORS_ALLOW_CREDENTIALS= True
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+
+# EMAIL_HOST = 'smtp.sendgrid.net' # else your smtp provider and Less Secure App should be allowed
+# EMAIL_PORT = 587
+# EMAIL_USE_TLS = True
+# EMAIL_HOST_USER = ['pY6LzQqSQsuWLtpN3D-Ugw']
+# EMAIL_HOST_PASSWORD = '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'
+
 
 WSGI_APPLICATION = "X.wsgi.application"
 
@@ -113,6 +136,13 @@ TIME_ZONE = "UTC"
 USE_I18N = True
 
 USE_TZ = True
+
+# USE_L10N = True
+
+
+
+# STATIC_URL = '/static/'
+# STATICFILES_DIR = ()
 
 
 # Static files (CSS, JavaScript, Images)
