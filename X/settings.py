@@ -150,7 +150,11 @@ USE_TZ = True
 
 STATIC_URL = "static/"
 
-# Default primary key field type
+# Default primary key field typepip install django-on-heroku
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+
+import django_on_heroku
+django_on_heroku.settings(locals())
