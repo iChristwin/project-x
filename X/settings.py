@@ -89,8 +89,7 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 # EMAIL_HOST = 'smtp.sendgrid.net' # else your smtp provider and Less Secure App should be allowed
 # EMAIL_PORT = 587
 # EMAIL_USE_TLS = True
-# EMAIL_HOST_USER = ['pY6LzQqSQsuWLtpN3D-Ugw']
-# EMAIL_HOST_PASSWORD = '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'
+
 
 
 WSGI_APPLICATION = "X.wsgi.application"
