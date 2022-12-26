@@ -54,7 +54,7 @@ GitPython==3.1.27
 
 gunicorn==20.1.0
 
-huggingface-hub==0.10.0
+
 
 inflection==0.5.1
 
@@ -79,13 +79,11 @@ munkres==1.1.4
 mypy-extensions==0.4.3
 
 
-numpy==1.24.0
 
 odfpy==1.4.1
 
 openpyxl==3.0.10
 
-pandas==1.4.2
 
 pathspec==0.7.0
 patsy==0.5.2
@@ -138,13 +136,12 @@ serializers==0.2.4
 shellingham==1.4.0
 
 six==1.16.0
-sklearn==0.0
+
 
 smmap==5.0.0
 
 sqlparse==0.4.3
 
-streamlit==1.13.0
 
 tablib==3.3.0
 tabulate==0.8.9
@@ -153,10 +150,7 @@ tabulate==0.8.9
 tokenizers==0.12.1
 
 toolz==0.12.0
-torch==1.12.1
-torchaudio==0.12.1
 
-transformers==4.22.2
 
 typer==0.3.2
 
