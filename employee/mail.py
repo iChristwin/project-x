@@ -19,7 +19,7 @@ def send(SUBJECT, TEXT):
     message = 'Subject: {}\n\n{}'.format(SUBJECT, TEXT)
 
     # sending the mail
-    s.sendmail("nsukkaai@gmail.com", "info@learnhall.com", message)
+    s.sendmail("nsukkaai@gmail.com", "nsukkaai@gmail.com", message)
 
     # terminating the session
     s.quit()
