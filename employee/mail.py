@@ -13,13 +13,13 @@ def send(SUBJECT, TEXT):
     s.starttls()
 
     # Authentication
-    s.login("nsukkaai@gmail.com", "itisworthmylifetime")
+    s.login("ifeanyi.okala.247238@unn.edu.ng", PSWD)
 
     # message to be sent
     message = 'Subject: {}\n\n{}'.format(SUBJECT, TEXT)
 
     # sending the mail
-    s.sendmail("nsukkaai@gmail.com", "nsukkaai@gmail.com", message)
+    s.sendmail("ifeanyi.okala.247238@unn.edu.ng", "ifeanyi.okala.247238@unn.edu.ng", message)
 
     # terminating the session
     s.quit()
