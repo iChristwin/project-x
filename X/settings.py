@@ -31,6 +31,7 @@ ALLOWED_HOSTS = ["127.0.0.1","learnhall.herokuapp.com"]
 # Application definition
 
 INSTALLED_APPS = [
+    "anymail",
     'employee',
     'rest_framework',
      "django.contrib.admin",
@@ -83,7 +84,7 @@ CORS_ORIGIN_ALLOW_ALL = True
 #
 # CORS_ALLOW_CREDENTIALS= True
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 
@@ -160,3 +161,11 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 import django_on_heroku
 django_on_heroku.settings(locals())
+
+
+# ================ ANYMAIL SETTINGS ================
+
+EMAIL_BACKEND = "anymail.backends.sendgrid.EmailBackend"
+ANYMAIL = {
+    "SENDGRID_API_KEY": os.environ['EMAIL_PASSWORD'],
+}

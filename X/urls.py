@@ -15,8 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-
+from employee.tests import send_email
 urlpatterns = [
+    # path('mail/', send_email),
     path("admin/", admin.site.urls),
     path("employee/", include('employee.urls', namespace='employee'))
 ]
