@@ -167,5 +167,5 @@ django_on_heroku.settings(locals())
 
 EMAIL_BACKEND = "anymail.backends.sendgrid.EmailBackend"
 ANYMAIL = {
-    "SENDGRID_API_KEY": os.environ['EMAIL_PASSWORD'],
+    "SENDGRID_API_KEY": os.environ['SENDGRID_SECRET_KEY'],
 }
